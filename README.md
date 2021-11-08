@@ -1,0 +1,2 @@
+# OpenCADDSuperpositionBenchmark
+Benchmarking the OpenCADD superposition methods
