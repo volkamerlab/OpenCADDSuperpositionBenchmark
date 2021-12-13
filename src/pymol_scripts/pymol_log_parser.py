@@ -1,8 +1,8 @@
-'''
+"""
 This script is used to parse the logfiles created by the alignment scripts for pymol.
 It saves the results in a csv for further analysis like in the notebooks.
 The path for the logfile aswell as the path for the resulting *.csv file need to be adjusted appropriately.
-'''
+"""
 
 from numpy import e
 import pandas as pd
@@ -27,13 +27,32 @@ rmsd_list = []
 cov_list = []
 time_list = []
 
-w0 = 1.5 # set the normalization factor of MI to 1.5 analog to the other methods
+w0 = 1.5  # set the normalization factor of MI to 1.5 analog to the other methods
 method = "pymol"
 
-df = pd.DataFrame(columns=["reference_id", "mobile_id", "method", "rmsd", 
-                           "coverage", "reference_size", "mobile_size", "time", 
-                           "SI", "MI", "SAS", "ref_name", "ref_group", "ref_species", 
-                           "ref_chain", "mob_name", "mob_group", "mob_species", "mob_chain"])
+df = pd.DataFrame(
+    columns=[
+        "reference_id",
+        "mobile_id",
+        "method",
+        "rmsd",
+        "coverage",
+        "reference_size",
+        "mobile_size",
+        "time",
+        "SI",
+        "MI",
+        "SAS",
+        "ref_name",
+        "ref_group",
+        "ref_species",
+        "ref_chain",
+        "mob_name",
+        "mob_group",
+        "mob_species",
+        "mob_chain",
+    ]
+)
 
 
 # parsing of the file
@@ -62,8 +81,8 @@ for line in lines:
         result = line.split(": (")
         result = ast.literal_eval(result[1][:-2])
         # use the next two lines for results with refinement
-        #rmsd_list.append(round(float(result[0]), 4))
-        #cov_list.append(int(result[1]))
+        # rmsd_list.append(round(float(result[0]), 4))
+        # cov_list.append(int(result[1]))
 
         # use the next two lines for resutls without refinement
         rmsd_list.append(round(float(result[3]), 4))
@@ -72,11 +91,33 @@ for line in lines:
         time_list.append(float(line.split(" ")[1]))
 
 for entry in range(len(ref_list)):
-        si = (rmsd_list[entry] * min(ref_size_list[entry], mob_size_list[entry])) / cov_list[entry]
-        mi = 1 - ((1 + cov_list[entry]) / ((1 + (rmsd_list[entry] / w0)) * (1 + min(ref_size_list[entry], mob_size_list[entry]))))
-        sas = (rmsd_list[entry] * 100) / cov_list[entry]
+    si = (rmsd_list[entry] * min(ref_size_list[entry], mob_size_list[entry])) / cov_list[entry]
+    mi = 1 - (
+        (1 + cov_list[entry])
+        / ((1 + (rmsd_list[entry] / w0)) * (1 + min(ref_size_list[entry], mob_size_list[entry])))
+    )
+    sas = (rmsd_list[entry] * 100) / cov_list[entry]
 
-        df.loc[entry] = [ref_list[entry], mob_list[entry], method, rmsd_list[entry], cov_list[entry], ref_size_list[entry], mob_size_list[entry], time_list[entry], si, mi, sas,
-                         ref_name[entry], ref_group[entry], ref_species[entry], ref_chain[entry], mob_name[entry], mob_group[entry], mob_species[entry], mob_chain[entry]]
+    df.loc[entry] = [
+        ref_list[entry],
+        mob_list[entry],
+        method,
+        rmsd_list[entry],
+        cov_list[entry],
+        ref_size_list[entry],
+        mob_size_list[entry],
+        time_list[entry],
+        si,
+        mi,
+        sas,
+        ref_name[entry],
+        ref_group[entry],
+        ref_species[entry],
+        ref_chain[entry],
+        mob_name[entry],
+        mob_group[entry],
+        mob_species[entry],
+        mob_chain[entry],
+    ]
 
-df.to_csv("<PATH_FOR_RESULT.csv>", mode="w", header=False, index = False)
+df.to_csv("<PATH_FOR_RESULT.csv>", mode="w", header=False, index=False)
