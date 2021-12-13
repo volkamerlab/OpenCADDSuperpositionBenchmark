@@ -8,19 +8,20 @@ This output file is parsed afterwards using the "pymol_log_parser.py".
 from pymol import cmd
 import time
 
+# get all structures (the sample sets created before, so the same structures as for OpenCADD)
 reference_strucs = []
-with open("/Users/julian/PythonProjects/Bachelor/benchmark/CAMK_samples.txt") as f:
+with open("<PATH_TO_SAMPLE_SET1>") as f:
     # split line, so no newline characters are left
-    # then split lines into lists to get the same structure as in the benchmark for OpenCADD
+    # then split lines into lists to get the same structure as in the benchmark for the OpenCADD methods
     temp = f.read().splitlines()
     for line in temp:
         struc = line.split(",")
         reference_strucs.append(struc)
 
 mobile_strucs = []
-with open("/Users/julian/PythonProjects/Bachelor/benchmark/CMGC_samples.txt") as f:
+with open("<PATH_TO_SAMPLE_SET2>") as f:
     # split line, so no newline characters are left
-    # then split lines into lists to get the same structure as in the benchmark for OpenCADD
+    # then split lines into lists to get the same structure as in the benchmark for the OpenCADD methods
     temp = f.read().splitlines()
     for line in temp:
         struc = line.split(",")

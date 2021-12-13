@@ -8,11 +8,11 @@ This output file is parsed afterwards using the "pymol_log_parser.py".
 from pymol import cmd
 import time
 
-# get all structures (list from jupyter notebook, so the same structure as for OpenCADD)
+# get all structures (the sample set created before, so the same structures as for OpenCADD)
 structures = []
-with open("/Users/julian/PythonProjects/Bachelor/benchmark/CMGC_samples.txt") as f:
+with open("<PATH_TO_SAMPLE_SET>") as f:
     # split line, so no newline characters are left
-    # then split lines into lists to get the same structure as in the benchmark for OpenCADD
+    # then split lines into lists to get the same structure as in the benchmark for the OpenCADD methods
     temp = f.read().splitlines()
     for line in temp:
         struc = line.split(",")

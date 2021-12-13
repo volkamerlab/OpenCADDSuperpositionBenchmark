@@ -2,6 +2,7 @@
 This script is used to parse the logfiles created by the alignment scripts for pymol.
 It saves the results in a csv for further analysis like in the notebooks.
 The path for the logfile aswell as the path for the resulting *.csv file need to be adjusted appropriately.
+For this project the csv file is saved in the `data/PyMol_results` folder.
 """
 
 from numpy import e
