@@ -12,19 +12,24 @@ This benchmark is the topic of the bachelor thesis of Julian Pipart.
 ___
 ## Installation of the tools
 
-1. Download the repository
+1. Download the repository:
     ```
     git clone https://github.com/volkamerlab/OpenCADDSuperpositionBenchmark.git
     ```
-2. Change to the appropriate branch
+2. Change to the appropriate branch:
     ```
     git checkout superposer_benchmark
     ```
-3. Follow steps below for installation of the methods.
+3. Create the conda environment:
+This environment.yml is based on the environment.yml of OpenCADD and includes additions for this benchmark.
+    ```
+    conda env create -f OpenCADDSuperpositionBenchmark.yml
+    ```
+4. Follow steps below for installation of the methods.
 ### OpenCADD
 Please follow the installation guide of [OpenCADD](https://opencadd.readthedocs.io/en/latest/installing.html). If the changes ([Pull request #117](https://github.com/volkamerlab/opencadd/pull/117)), which are made as part of the project, are not in the master branch yet, please use the [jp-superposer-extension branch](https://github.com/volkamerlab/opencadd/tree/jp-superposer-extension).
 
-Therefore the download of the git repository is required.
+Therefore the download of the git repository is required:
 ```
 git clone https://github.com/volkamerlab/opencadd.git
 ```
