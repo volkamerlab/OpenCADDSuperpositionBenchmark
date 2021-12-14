@@ -58,10 +58,10 @@ The alignments of the OpenCADD methods are performed in the notebooks.
 The paths in the scripts need to be changed appropriately for your system.
 ___
 ## References
-[1] Available at: https://github.com/volkamerlab/opencadd
-[2] S. G. Yuan, H. C. S. Chan, and Z. Q. Hu, “Using pymol as a platform for computational drug design,”Wiley Interdisciplinary Reviews-Computational Molecular Science, vol. 7, no. 2, 2017. [Online]. Available:$<$Go to ISI$>$$:$//WOS:000399013100006
-[3] Schrödinger, LLC, “The PyMOL molecular graphics system, version 1.8,” November 2015.
-[4] E. C. Meng, E. F. Pettersen, G. S. Couch, C. C. Huang, and T. E. Ferrin, “Tools for integratedsequence-structure analysis with ucsf chimera,”BMC Bioinformatics, vol. 7, p. 339, 2006. [Online].Available:  https://www.ncbi.nlm.nih.gov/pubmed/16836757
+[1] Available at: https://github.com/volkamerlab/opencadd \
+[2] S. G. Yuan, H. C. S. Chan, and Z. Q. Hu, “Using pymol as a platform for computational drug design,”Wiley Interdisciplinary Reviews-Computational Molecular Science, vol. 7, no. 2, 2017. [Online]. Available:$<$Go to ISI$>$$:$//WOS:000399013100006 \
+[3] Schrödinger, LLC, “The PyMOL molecular graphics system, version 1.8,” November 2015. \
+[4] E. C. Meng, E. F. Pettersen, G. S. Couch, C. C. Huang, and T. E. Ferrin, “Tools for integratedsequence-structure analysis with ucsf chimera,”BMC Bioinformatics, vol. 7, p. 339, 2006. [Online].Available:  https://www.ncbi.nlm.nih.gov/pubmed/16836757 \
 [5]  E. F. Pettersen, T. D. Goddard, C. C. Huang, E. C. Meng, G. S. Couch, T. I. Croll, J. H. Morris, andT. E. Ferrin, “Ucsf chimerax:  Structure visualization for researchers, educators, and developers,”ProteinSci, vol. 30, no. 1, pp. 70–82, 2021. [Online]. Available:  https://www.ncbi.nlm.nih.gov/pubmed/32881101
 
 ___
