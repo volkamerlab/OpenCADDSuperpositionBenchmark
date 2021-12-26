@@ -57,20 +57,6 @@ To see if it was successful, one can check with the following command:
 superposer -h
 ```
 
-Therefore the download of the git repository is required:
-```
-git clone https://github.com/volkamerlab/opencadd.git
-```
-MMLigner requires a rebuild, please follow steps shown below while in the "jp-superposer-extension" branch:
-```
-conda config --add channels conda-forge 
-conda activate base
-conda install conda-build
-conda build devtools/conda-recipes/mmligner/
-conda activate OpenCADDBenchmark
-conda install -c local mmligner pip
-```
-
 
 ### PyMol
 For the installation of the Open-Source PyMol, please follow the guide of the PyMolWiki:
