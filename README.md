@@ -16,18 +16,46 @@ ___
     ```
     git clone https://github.com/volkamerlab/OpenCADDSuperpositionBenchmark.git
     ```
+[comment]: <> (MASTER LATER)
 2. Change to the appropriate branch:
     ```
     git checkout superposer_benchmark
     ```
-3. Create the conda environment:
+2. Create the conda environment:
 This environment.yml is based on the environment.yml of OpenCADD and includes additions for this benchmark.
+It extends the OpenCADD environment file. So no additional environment for this benchmark should be required.
     ```
     conda env create -f OpenCADDSuperpositionBenchmark.yml
     ```
 4. Follow steps below for installation of the methods.
 ### OpenCADD
-Please follow the installation guide of [OpenCADD](https://opencadd.readthedocs.io/en/latest/installing.html). If the changes ([Pull request #117](https://github.com/volkamerlab/opencadd/pull/117)), which are made as part of the project, are not in the master branch yet, please use the [jp-superposer-extension branch](https://github.com/volkamerlab/opencadd/tree/jp-superposer-extension).
+IMPORTANT: The benchmark was performed with changes made in OpenCADD, which are in the [jp-superposer-extension branch](https://github.com/volkamerlab/opencadd/tree/jp-superposer-extension). So the guide will explain how to use this branch for recreation.
+
+Therefore, the download of the git repository is required:
+```
+git clone https://github.com/volkamerlab/opencadd.git
+```
+Next, the branch is changed to "jp-superposer-extension":
+```
+git checkout jp-superposer-extension
+```
+MMLigner requires a rebuild, please follow steps shown below while in the "jp-superposer-extension" branch:
+```
+conda config --add channels conda-forge 
+conda activate base
+conda install conda-build
+conda build devtools/conda-recipes/mmligner/
+conda activate OpenCADDBenchmark
+conda install -c local mmligner pip
+```
+Afterwards the superposer module can be installed locally:
+```
+pip install . 
+```
+To see if it was successful, one can check with the following command:
+```
+superposer -h
+```
 
 Therefore the download of the git repository is required:
 ```
