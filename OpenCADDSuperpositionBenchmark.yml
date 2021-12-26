@@ -1,5 +1,6 @@
-# This is the environment.yml of the OpenCADD repository with some additions.
+# This environment.yml extends the one of the OpenCADD repository.
 # For OpenCADD please visit https://github.com/volkamerlab/opencadd.
+# The jp-superposer-extension branch of OpenCADD was used for this project.
 name: OpenCADDBenchmark
 channels:
   - conda-forge
@@ -43,4 +44,5 @@ dependencies:
   - seaborn
   - scipy
   - statsmodels
-  # OpenCADD needs to be installed to by following the documentation of its installation.
+  - jupyter
+  # OpenCADD needs to be installed to by following the README in this repository.
