@@ -68,7 +68,7 @@ ___
 For ChimeraX Matchmaker and PyMol align separate scripts were developed to perform the alignments and parse the output, to bring it into a readable dataframe for the analysis.
 The alignments of the OpenCADD methods are performed in the notebooks.
 The paths in the scripts need to be changed appropriately for your system.
-Every folder contains an additional README file to explain, what data this folder contains. 
+Subfolders contain additional README files to explain, what data they contain. 
 ___
 ## References
 [1] Available at: https://github.com/volkamerlab/opencadd \
