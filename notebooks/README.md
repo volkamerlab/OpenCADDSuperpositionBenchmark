@@ -1,6 +1,6 @@
 # Notebooks folder
 
-This folder contains the Jupyter notebooks, which are used to visualise and analyse the results of the alignments. The function call for the OpenCADD alignments is also present in the notebooks. 
+This folder contains the Jupyter notebooks, which are used to visualise and analyse the results of the alignments. The function call for the OpenCADD alignments is also present in the notebooks, but commented out to avoid accidental calls. 
 The paths for this call need to be adjusted if used.
 
 The Early_Results_TK notebook represents the results of the first two stages of the benchmark including the results of the alignments by MDA with different parameters for the sequence alignment.
