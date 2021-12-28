@@ -81,3 +81,49 @@ The columns are:
 
 All csv files have the same structure except the file in the ./OpenCADD_results/first_results folder.
 This file contains columns 1-11.
+
+## samples:
+
+This folder contains the lists of sample structures used in this benchmark (*.txt files).
+
+The structure is:
+
+1. reference_id: PDB-ID of the structure
+2. ref_name: Name of the Kinase
+3. ref_group: Group of the Kinase
+4. ref_species: Species of the Kinase
+5. ref_chain: Chain of the Kinase used for the calculation
+
+The 20211102_klifs_dataset.csv contains the dataframe representing the KLIFS data queried by the script available in the "Acquire_samples" notebook.
+Each row represents a structure and the associated information.
+
+The columns are:
+1. kinase.klifs_id
+2. kinase.klifs_name
+3. kinase.full_name
+4. kinase.gene_name
+5. kinase.family
+6. kinase.group
+7. kinase.subfamily
+8. species.klifs
+9. kinase.uniprot
+10. kinase.iuphar
+11. kinase.pocket
+12. structure.klifs_id
+13. structure.pdb_id
+14. structure.pocket
+15. ligand.expo_id
+16. structure.dfg
+17. structure.ac_helix
+18. structure.resolution
+19. structure.qualityscore
+20. structure.missing_residues
+21. structure.missing_atoms
+22. structure.rmsd1 
+23. structure.rmsd2
+
+For details, please visit [the KLIFS Website](https://klifs.net).
+
+KLIFS Paper:
+
+ G. K. Kanev, C. de Graaf, B. A. Westerman, I. J. P. de Esch, and A. J. Kooistra, “Klifs:  an overhaulafter the first 5 years of supporting kinase research,”Nucleic Acids Res, vol. 49, no. D1, pp. D562–D569,2021. [Online]. Available:  https://www.ncbi.nlm.nih.gov/pubmed/33084889
