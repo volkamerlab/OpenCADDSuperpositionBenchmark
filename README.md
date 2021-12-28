@@ -16,18 +16,16 @@ ___
     ```
     git clone https://github.com/volkamerlab/OpenCADDSuperpositionBenchmark.git
     ```
-[comment]: <> (MASTER LATER)
-2. Change to the appropriate branch:
-    ```
-    git checkout superposer_benchmark
-    ```
+
 2. Create the conda environment:
 This environment.yml is based on the environment.yml of OpenCADD and includes additions for this benchmark.
 It extends the OpenCADD environment file. So no additional environment for this benchmark should be required.
     ```
     conda env create -f OpenCADDSuperpositionBenchmark.yml
     ```
-4. Follow steps below for installation of the methods.
+
+3. Follow steps below for installation of the methods.
+
 ### OpenCADD
 IMPORTANT: The benchmark was performed with changes made in OpenCADD, which are in the [jp-superposer-extension branch](https://github.com/volkamerlab/opencadd/tree/jp-superposer-extension). So the guide will explain how to use this branch for recreation.
 
@@ -60,16 +58,17 @@ superposer -h
 
 ### PyMol
 For the installation of the Open-Source PyMol, please follow the guide of the PyMolWiki:
-[Linux Install](https://pymolwiki.org/index.php/Linux_Install)
-[MAC Install](https://pymolwiki.org/index.php/MAC_Install)
+- [Linux Install](https://pymolwiki.org/index.php/Linux_Install)
+- [MAC Install](https://pymolwiki.org/index.php/MAC_Install)
 
 ### ChimeraX
-For the installation of ChimeraX, please use their download website and follow their installation guide. (See [here](https://www.cgl.ucsf.edu/chimerax/))
+For the installation of ChimeraX, please use their download website and follow their installation guide. (See [here](https://www.cgl.ucsf.edu/chimerax/download.html))
 
 ___
 For ChimeraX Matchmaker and PyMol align separate scripts were developed to perform the alignments and parse the output, to bring it into a readable dataframe for the analysis.
 The alignments of the OpenCADD methods are performed in the notebooks.
 The paths in the scripts need to be changed appropriately for your system.
+Every folder contains an additional README.txt to explain, what data this folder contains. 
 ___
 ## References
 [1] Available at: https://github.com/volkamerlab/opencadd \
