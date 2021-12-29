@@ -100,7 +100,7 @@ def run_alignments(sample1_path=None, sample2_path=None, output_path=None, w0=1.
                 for mobile in sample_strucs2:
                     mobile_structure = Structure.from_pdbid(mobile[0])
                     benchmarking_structures = [reference_structure, mobile_structure]
-                    compute_alignment(
+                    df, counter, except_counter = compute_alignment(
                         method,
                         benchmarking_structures,
                         structure,
@@ -123,7 +123,7 @@ def run_alignments(sample1_path=None, sample2_path=None, output_path=None, w0=1.
                 for mobile in sample_strucs1[sample_strucs1.index(structure) + 1 :]:
                     mobile_structure = Structure.from_pdbid(mobile[0])
                     benchmarking_structures = [reference_structure, mobile_structure]
-                    compute_alignment(
+                    df, counter, except_counter = compute_alignment(
                         method,
                         benchmarking_structures,
                         structure,
@@ -175,7 +175,12 @@ def compute_alignment(
 
     Returns
     -------
-    None
+    df: Pandas.DataFrame
+        The DataFrame where the results are stored.
+    counter: int
+        Counts the number of alignments. This is used to see the progress. 
+    except_counter: int
+        Counts the occurences of excepts while performing all alignments. 0 means, that there were no problems performing the alignemnts.
     """
 
     print(counter, method, structure, mobile)
@@ -287,3 +292,4 @@ def compute_alignment(
         ]
         except_counter += 1
     counter += 1
+    return df, counter, except_counter
