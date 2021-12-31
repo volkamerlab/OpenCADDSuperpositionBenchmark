@@ -1,0 +1,48 @@
+# This environment.yml extends the one of the OpenCADD repository.
+# For OpenCADD please visit https://github.com/volkamerlab/opencadd.
+# The jp-superposer-extension branch of OpenCADD was used for this project.
+name: OpenCADDBenchmark
+channels:
+  - conda-forge
+  - defaults
+  - bioconda
+dependencies:
+  # Base depends
+  - python
+  - pip
+  - MDAnalysis
+  - nglview
+  - pandas
+  - matplotlib-base
+  - redo
+  # Remove jsonschema once this issue is fixed: https://github.com/Yelp/bravado/issues/478
+  - jsonschema<4.0.0
+  - bravado
+  - biopandas
+  - rdkit
+  - tqdm
+  # Chimera reimplementation
+  - biotite
+  - biopython 1.77
+  # mmligner
+  - mmligner
+  # theseus
+  - muscle
+  - clustalo
+  - theseus
+  # Testing
+  - pytest
+  - pytest-cov
+  - codecov
+  # docs
+  - sphinx
+  - sphinx_rtd_theme
+  - nbsphinx
+  # benchmark additions
+  - numpy
+  - matplotlib
+  - seaborn
+  - scipy
+  - statsmodels
+  - jupyter
+  # OpenCADD needs to be installed to by following the README in this repository.

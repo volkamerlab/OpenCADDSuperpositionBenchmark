@@ -1,2 +1,82 @@
 # OpenCADDSuperpositionBenchmark
-Benchmarking the OpenCADD superposition methods
+This repository icludes a benchmark of the OpenCADD superposition methods[1], PyMol align[2][3] as well as ChimeraX Matchmaker[4][5].
+
+The methods are compared by their performance of alignment of four kinase groups.
+The performance is measured by three different quality measures.
+
+The notebooks show the results of the benchmark.
+A more detailed analysis is performed for the alignments between TK structures and the alignments between TK and CAMK stuctures. 
+
+This benchmark is the topic of the bachelor thesis of Julian Pipart. 
+
+___
+## Installation of the tools
+
+1. Download the repository:
+    ```
+    git clone https://github.com/volkamerlab/OpenCADDSuperpositionBenchmark.git
+    ```
+
+2. Create the conda environment:
+This environment.yml is based on the environment.yml of OpenCADD and includes additions for this benchmark.
+It extends the OpenCADD environment file. So no additional environment for this benchmark should be required.
+    ```
+    conda env create -f OpenCADDSuperpositionBenchmark.yml
+    ```
+
+3. Follow steps below for installation of the methods.
+
+### OpenCADD
+IMPORTANT: The benchmark was performed with changes made in OpenCADD, which are in the [jp-superposer-extension branch](https://github.com/volkamerlab/opencadd/tree/jp-superposer-extension). So the guide will explain how to use this branch for recreation.
+
+Therefore, the download of the git repository is required:
+```
+git clone https://github.com/volkamerlab/opencadd.git
+```
+Next, the branch is changed to "jp-superposer-extension":
+```
+git checkout jp-superposer-extension
+```
+MMLigner requires a rebuild, please follow steps shown below while in the "jp-superposer-extension" branch:
+```
+conda config --add channels conda-forge 
+conda activate base
+conda install conda-build
+conda build devtools/conda-recipes/mmligner/
+conda activate OpenCADDBenchmark
+conda install -c local mmligner pip
+```
+Afterwards the superposer module can be installed locally:
+```
+pip install . 
+```
+To see if it was successful, one can check with the following command:
+```
+superposer -h
+```
+
+
+### PyMol
+For the installation of the Open-Source PyMol, please follow the guide of the PyMolWiki:
+- [Linux Install](https://pymolwiki.org/index.php/Linux_Install)
+- [MAC Install](https://pymolwiki.org/index.php/MAC_Install)
+
+### ChimeraX
+For the installation of ChimeraX, please use their download website and follow their installation guide. (See [here](https://www.cgl.ucsf.edu/chimerax/download.html))
+
+___
+For ChimeraX Matchmaker and PyMol align separate scripts were developed to perform the alignments and parse the output, to bring it into a readable dataframe for the analysis.
+The alignments of the OpenCADD methods are performed in the notebooks.
+The paths in the scripts need to be changed appropriately for your system.
+Subfolders contain additional README files to explain, what data they contain. 
+___
+## References
+[1] Available at: https://github.com/volkamerlab/opencadd \
+[2] S. G. Yuan, H. C. S. Chan, and Z. Q. Hu, “Using pymol as a platform for computational drug design,”Wiley Interdisciplinary Reviews-Computational Molecular Science, vol. 7, no. 2, 2017. [Online]. Available:<Go to ISI>://WOS:000399013100006 \
+[3] Schrödinger, LLC, “The PyMOL molecular graphics system, version 1.8,” November 2015. \
+[4] E. C. Meng, E. F. Pettersen, G. S. Couch, C. C. Huang, and T. E. Ferrin, “Tools for integratedsequence-structure analysis with ucsf chimera,”BMC Bioinformatics, vol. 7, p. 339, 2006. [Online].Available:  https://www.ncbi.nlm.nih.gov/pubmed/16836757 \
+[5]  E. F. Pettersen, T. D. Goddard, C. C. Huang, E. C. Meng, G. S. Couch, T. I. Croll, J. H. Morris, andT. E. Ferrin, “Ucsf chimerax:  Structure visualization for researchers, educators, and developers,”ProteinSci, vol. 30, no. 1, pp. 70–82, 2021. [Online]. Available:  https://www.ncbi.nlm.nih.gov/pubmed/32881101
+
+___
+## Acknowledgements
+Thank you to all the members of the Volkamer Lab for the great opportunity of conduction my bachelor thesis here.
