@@ -116,7 +116,7 @@ ___
 [18] C. R. Harris, K. J. Millman, S. J. van der Walt, R. Gommers, P. Virtanen, D. Cournapeau, E. Wieser, J. Taylor, S. Berg, N. J. Smith, R. Kern, M. Picus, S. Hoyer, M. H. van Kerkwijk, M. Brett, A. Haldane, J. F. del Río, M. Wiebe, P. Peterson, P. Gérard-Marchant, K. Sheppard, T. Reddy, W. Weckesser, H. Abbasi, C. Gohlke, and T. E. Oliphant, “Array programming with NumPy,” Nature, vol. 585, no.7825, pp. 357–362, Sep. 2020. [Online]. Available:  https://doi.org/10.1038/s41586-020-2649-2 \
 [19] S. Seabold and J. Perktold, “statsmodels:  Econometric and statistical modeling with python,” in 9th Python in Science Conference, 2010. \
 [20] “Conda documentation,”. [Online]. Available:  https://docs.conda.io/projects/conda/en/latest/index.html \
-[21] “pip documentation,”. [Online]. Available: [https://pip.pypa.io/en/stable/](https://pip.pypa.io/en/stable/#) \
+[21] “pip documentation,”. [Online]. Available: [https://pip.pypa.io/en/stable/](https://pip.pypa.io/en/stable/#)
 
 ___
 ## Acknowledgements
