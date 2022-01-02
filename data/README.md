@@ -30,12 +30,12 @@ The three subfolders represent the three stages of the benchmark.
 1. first_results: 
    
    The first results of the methods implemented in OpenCADD.
-   Theseus used MUSCLE for the sequence alignment and MDA used the global alignemnt with a gap penalty of -10 for every gap.
+   Theseus used MUSCLE for the sequence alignment and MDA used the global alignment with a gap penalty of -10 for every gap.
    The alignments were performed on all chains contained in the pdb files.
 
 2. intermediate_results:
 
-    The alignments were performed on one chain (chain is visible in the *.csv files).
+    The alignments were performed on one chain (the chain is visible in the *.csv files).
     Theseus now used Clustal Omega for the sequence alignments and MDA used the local alignment option with a gap penalty of -10 for every gap.
 
     Additionally, the folder mda_parameter_tests contains the results of the alignments performed by MDA using different sequence alignment parameters. 
@@ -46,7 +46,7 @@ The three subfolders represent the three stages of the benchmark.
 3. The *.csv files in the OpenCADD_results folder:
 
     These are the results of the last stage of the benchmark.
-    Theseus and MDA used Clustal Omega for the sequence alignments.
+    Theseus and MDA used Clustal Omega for the sequence alignments and the calculations were performed on one chain.
 
 ## figures:
 
@@ -125,5 +125,4 @@ The columns are:
 For details, please visit [the KLIFS Website](https://klifs.net).
 
 KLIFS Paper:
-
- G. K. Kanev, C. de Graaf, B. A. Westerman, I. J. P. de Esch, and A. J. Kooistra, “Klifs:  an overhaulafter the first 5 years of supporting kinase research,”Nucleic Acids Res, vol. 49, no. D1, pp. D562–D569,2021. [Online]. Available:  https://www.ncbi.nlm.nih.gov/pubmed/33084889
+G. K. Kanev, C. de Graaf, B. A. Westerman, I. J. P. de Esch, and A. J. Kooistra, “Klifs:  an overhaulafter the first 5 years of supporting kinase research,”Nucleic Acids Res, vol. 49, no. D1, pp. D562–D569,2021. [Online]. Available:  https://www.ncbi.nlm.nih.gov/pubmed/33084889

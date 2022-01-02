@@ -6,7 +6,7 @@ Additionally the functions used in the Jupyter Notebooks is provided in this fol
 ## analysis_utils.py
 This file contains all functions used for the visualisation and analysis of the results in the Jupyter notebooks.
 It is imported in the notebooks and the function are called there.
-Some additional function are provided.
+Some additional functions are provided.
 For example a ```compute_anova``` is also provided, if the data is distributed normally.
 For descriptions of the functions please refer to the docstrings in the file.
 
@@ -18,4 +18,4 @@ To perform within-group alignments, one sample path needs to be provided.
 To perform between-groups alignments, two sample paths are required.
 The output_path determines, where the output csv file will be saved.
 ___
-Additional information for the subfolder can be found in the READMEs of the accorind subfolders.
+Additional information for the subfolder can be found in the READMEs of the accoring subfolders.
